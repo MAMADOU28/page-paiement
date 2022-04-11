@@ -1,90 +1,122 @@
 <!DOCTYPE html>
-	<html>
-	<head>
-		
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<title></title>
-	</head>
-	<body>
+<html>
 
-		<header>
-			<nav>
-				<img src="./img/apg.png">
-				
-				</nav>
-			
-			
-		</header>
-		
+<head>
 
-<section class="select">
-	<select name="format" id="format">
-		<option selected disabled>choisir un pays</option>
-		<option value="sénégal">SENEGAL</option>
-		<option value="gambie">GAMBIE</option>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title></title>
+</head>
 
-	</select>
+<body>
+	<header>
+		<nav>
+			<img src="./img/apg.png">
+		</nav>
+	</header>
+	<section class="select" id="select">
+		<select name="format" id="format" onchange="selectShow(this)">
+			<option value="null">Choisir un pays</option>
+			<option value="SN">SENEGAL</option>
+			<option value="GB">GAMBIE</option>
+		</select>
 
 		</div>
-	</div>
-</section>
-<div class="container wrap">	
-	<div class="box">
-	<div class="box-item">
-		<img class="img" src="./img/optima.png">
-				<span>OPTIMA</span>
-
-	</div>
-</div>
-<div class="box">
-	<div class="box-item">
-	<img class="img" src="./img/om.png">
-		<span>ORANGE MONEY</span>
-
-</div>
-</div>
-<div class="box">
-	<div class="box-item">
-		<img class="img" src="./img/free.png">
-				<span>FREE MONEY</span>
-
-	</div>
-</div>
-
-<div class="box">
-	<div class="box-item">
-		<img class="img" src="./img/wave.png">
-				<span>WAVE</span>
-
-	</div>
-</div>
-<div class="box">
-	<div class="box-item">
-		<img class="img" src="./img/card.png">
-				<span>CARTE</span>
-
-	</div>
-</div>
-<div class="box">
-	<div class="box-item">
-		<img class="img" src="./img/exp.png">
-				<span>E-MONEY</span>
-
-	</div>
-</div>
-<div class="box">
-	<div class="box-item">
-		<img class="img" src="./img/bitcoin.png">
-				<span>BITCOIN</span>
-
-	</div>
-</div>
-</div>
-<div class="footer">
-  <p>APG &copy; Copyright 2022 </p>
-</div>
+		</div>
+	</section>
+	<div class="primary" id="senegal">
+		<fieldset class="wrap" style="width: 100%;">
+			<legend>Moyen de paiement</legend>
+			<div class="box" id="optima" onclick="showOrHideDivOpt()">
+				<div class="box-item">
+					<img class="img" src="./img/optima.png">
+					<span></span>
+				</div>
+			</div>
+			<div class="box" id="om" onclick="showOrHideDivOther()">
+				<div class="box-item">
+					<img class="img" src="./img/om.png">
+					<span></span>
+				</div>
+			</div>
+			<div class="box" id="free" onclick="showOrHideDivOther()">
+				<div class="box-item">
+					<img class="img" src="./img/free.png">
+					<span></span>
+				</div>
+			</div>
+			<div class="box" id="wave" onclick="showOrHideDivOther()">
+				<div class="box-item">
+					<img class="img" src="./img/wave.png">
+					<span></span>
+				</div>
+			</div>
+			<div class="box" id="exp" onclick="showOrHideDivOther()">
+				<div class="box-item">
+					<img class="img" src="./img/exp.png">
+					<span></span>
+				</div>
+			</div>
+			<div class="box" id="wiz" onclick="showOrHideDivOther()">
+				<div class="box-item">
+					<img class="img" src="./img/wiz.png">
+					<span></span>
+				</div>
+			</div>
+			<div class="box" id="btc" onclick="showOrHideDivOther()">
+				<div class="box-item">
+					<img class="img" src="./img/bitcoin.png">
+					<span></span>
+				</div>
 	
-	</body>
-	</html>
+			</div>
+			<div class="box" id="visa" onclick="showOrHideDivOther()">
+				<div class="box-item">
+					<img class="img" src="./img/visa.jpg">
+					<span></span>
+				</div>
+			</div>
+		</fieldset>
+	
+	</div>
+
+	<div class="formulaire wrap">
+		<form>
+			<div class="optima" id="opt">
+				<div>
+					<label for="name"> Téléphone : </label>
+					<input type="text" telephone="numero de telephone" id="numero">
+				</div>
+				<div>
+					<label for="name"> Code : </label>
+					<input type="text" code="numero de telephone" id="numero">
+				</div>
+				<div class="bouton" id="bouton">
+
+					<button>ENVOYEZ</button>
+				</div>
+			</div>
+			<div class="autre" id="autre">
+				<div>
+					<label for="name"> Téléphone : </label>
+					<input type="text" telephone="numero de telephone" id="numero">
+				</div>
+				<div class="bouton" id="bouton">
+
+					<button>ENVOYEZ</button>
+				</div>
+			</div>
+			
+
+		</form>
+
+		<div class="footer">
+
+			<p>APG &copy; Copyright 2022 </p>
+		</div>
+</body>
+<script type="text/javascript" src="./app.js">
+</script>
+
+</html>
